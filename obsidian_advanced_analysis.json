@@ -1,0 +1,687 @@
+{
+  "document_similarities": {
+    "Distributed Rate Limiting System Design.md": [
+      {
+        "filename": "High-Scale Batch Payee Validation System.md",
+        "similarity_score": 0.5526193380355835,
+        "suggested_link_text": "\"Distributed System Performance Patterns\"\n\nThis link text connects the documents by highlighting their shared focus on distributed systems architecture and performance optimization, while being concise and descriptive."
+      },
+      {
+        "filename": "CAP Theorem.md",
+        "similarity_score": 0.5343571901321411,
+        "suggested_link_text": "\"Distributed Systems Design Principles\"\n\nThis link text effectively connects the two documents by highlighting their shared focus on fundamental distributed systems concepts, with the source covering rate limiting patterns and the target exploring CAP theorem principles."
+      },
+      {
+        "filename": "Distributed Consistency with Paxos Protocol.md",
+        "similarity_score": 0.5167710781097412,
+        "suggested_link_text": "\"Distributed Systems Architecture Fundamentals\"\n\nThis link text connects the documents by focusing on their shared core theme of fundamental distributed systems concepts, with both covering critical architectural components (rate limiting and consensus protocols) in distributed environments."
+      },
+      {
+        "filename": "AWS Services Deep Dive.md",
+        "similarity_score": 0.5030036568641663,
+        "suggested_link_text": "\"Distributed Cloud Scaling Systems\"\n\nThis link text connects the rate limiting concepts from the first document with the AWS architecture from the second, focusing on their shared themes of distributed systems and scalable architecture."
+      }
+    ],
+    "Database Indexing Overview.md": [],
+    "Types of DataBases.md": [
+      {
+        "filename": "SQL vs No-SQL.md",
+        "similarity_score": 0.53385990858078,
+        "suggested_link_text": "\"Database Types Comparison\"\n\nThis link text effectively connects the source document about database types to the target document comparing SQL and NoSQL databases, capturing the core relationship between these related technical resources."
+      }
+    ],
+    "SQL vs No-SQL.md": [
+      {
+        "filename": "Types of DataBases.md",
+        "similarity_score": 0.53385990858078,
+        "suggested_link_text": "\"Database Types Comparison\"\n\nThis link text effectively connects the two documents as:\n1. The source discusses SQL vs NoSQL comparison\n2. The target provides a broader overview of database types\n3. Both documents focus on database architecture and classification"
+      },
+      {
+        "filename": "Database Migration Strategies.md",
+        "similarity_score": 0.519082248210907,
+        "suggested_link_text": "\"Database Selection Strategy\"\n\nThis link text connects the documents naturally since the first covers SQL/NoSQL selection criteria while the second discusses database migration approaches - both relating to strategic database decisions."
+      },
+      {
+        "filename": "System Design Interview Senior Software Engineer - Harsh Tiwari.md",
+        "similarity_score": 0.5028279423713684,
+        "suggested_link_text": "\"Database Selection Guide\" - This link text effectively connects the SQL/NoSQL database comparison document to the system design interview preparation content, as database selection is a crucial aspect of system design discussions."
+      }
+    ],
+    "Database Migration Strategies.md": [
+      {
+        "filename": "SQL vs No-SQL.md",
+        "similarity_score": 0.519082248210907,
+        "suggested_link_text": "\"Database Architecture Comparison\"\n\nThis link text effectively connects the database migration strategies document with the SQL vs NoSQL comparison guide, focusing on their shared theme of database architecture while being concise and descriptive."
+      }
+    ],
+    "Basics of System Design.md": [],
+    "pormpts.md": [],
+    "overview.md": [],
+    "tags.md": [],
+    "Head-of-Line Blocking(The Evolution From HTTP-1.1 to HTTP-3).md": [],
+    "OSI Model.md": [],
+    "DNS & Internet Connectivity.md": [],
+    "Content Delivery Networks (CDN) and Network Routing.md": [],
+    "Caching Mechanisms in System Design.md": [],
+    "Consistency in Distributed Systems.md": [],
+    "Distributed Consistency with Paxos Protocol.md": [
+      {
+        "filename": "Distributed Rate Limiting System Design.md",
+        "similarity_score": 0.5167710781097412,
+        "suggested_link_text": "\"Distributed Systems Architecture Fundamentals\"\n\nThis link text connects the documents well because:\n1. Both deal with core distributed systems concepts\n2. Both cover architectural patterns (Paxos and rate limiting)\n3. Both are fundamental building blocks for distributed system design"
+      },
+      {
+        "filename": "High-Scale Batch Payee Validation System.md",
+        "similarity_score": 0.5051273107528687,
+        "suggested_link_text": "\"Distributed System Consensus Implementation\" - this link text connects the Paxos consensus protocol from the source document to the distributed architecture described in the target document, highlighting how theoretical consistency principles are applied in a practical system."
+      }
+    ],
+    "Load Balancer.md": [],
+    "Too much Requests.md": [],
+    "Random Service or others.md": [],
+    "Senior Software Engineer Interview Preparation.md": [
+      {
+        "filename": "System Design Interview Senior Software Engineer - Harsh Tiwari.md",
+        "similarity_score": 0.5678632855415344,
+        "suggested_link_text": "\"System Design Interview Prep\"\n\nThis link text effectively connects the documents since both focus on system design in the context of senior software engineer interview preparation, while remaining concise and descriptive."
+      }
+    ],
+    "CAP Theorem.md": [
+      {
+        "filename": "Distributed Rate Limiting System Design.md",
+        "similarity_score": 0.5343571901321411,
+        "suggested_link_text": "\"Distributed Systems Architecture Fundamentals\"\n\nThis link text connects the two documents well since both discuss core architectural concepts in distributed systems - CAP theorem in the first and rate limiting in the second, making it a logical bridge between these related topics."
+      }
+    ],
+    "Apache Kafka- Comprehensive Guide.md": [],
+    "Transaction Isolation Levels in Databases.md": [],
+    "Consistent Hashing.md": [],
+    "A Markdown based task tracker.md": [],
+    "Some new Ideas.md": [],
+    "UI Competition review.md": [],
+    "System Design Interview Senior Software Engineer - Harsh Tiwari.md": [
+      {
+        "filename": "Senior Software Engineer Interview Preparation.md",
+        "similarity_score": 0.5678632855415344,
+        "suggested_link_text": "\"System Design Interview Guide\"\n\nThis link text concisely connects both documents as they focus on system design preparation for senior software engineering interviews."
+      },
+      {
+        "filename": "SQL vs No-SQL.md",
+        "similarity_score": 0.5028279423713684,
+        "suggested_link_text": "\"Database Systems Architecture\"\n\nThis link text connects the system design interview context from the first document with the database architecture focus of the second document, bridging their shared technical infrastructure theme."
+      }
+    ],
+    "AWS Services Deep Dive.md": [
+      {
+        "filename": "High-Scale Batch Payee Validation System.md",
+        "similarity_score": 0.5128011703491211,
+        "suggested_link_text": "\"Cloud Messaging Architectures\"\n\nThis link text connects the documents effectively because:\n1. Both documents focus on messaging-based architectures\n2. One covers AWS cloud services while the other describes a distributed system\n3. Both deal with message processing and queue-based workflows"
+      },
+      {
+        "filename": "Distributed Rate Limiting System Design.md",
+        "similarity_score": 0.5030036568641663,
+        "suggested_link_text": "\"Cloud Architecture Patterns\" - This link text connects the AWS services document with the rate limiting design doc, as both focus on architectural patterns for distributed cloud systems."
+      }
+    ],
+    "Intelligent Task Processing System - Interview Analysis.md": [],
+    "High-Scale Batch Payee Validation System.md": [
+      {
+        "filename": "Distributed Rate Limiting System Design.md",
+        "similarity_score": 0.5526193380355835,
+        "suggested_link_text": "\"Distributed Systems Performance Architecture\"\n\nThis link text connects the documents through their shared focus on distributed systems architecture and performance optimization, as evidenced by their common tags and technical focus on high-scale processing and system control mechanisms."
+      },
+      {
+        "filename": "AWS Services Deep Dive.md",
+        "similarity_score": 0.5128011703491211,
+        "suggested_link_text": "\"Distributed Queue Processing Architectures\"\n\nThis link text connects the documents by highlighting their shared focus on distributed message processing systems, with both featuring queue-based architectures (Kafka/Redis in the first, SNS/SQS in the second) for handling high-scale operations."
+      },
+      {
+        "filename": "Distributed Consistency with Paxos Protocol.md",
+        "similarity_score": 0.5051273107528687,
+        "suggested_link_text": "\"Distributed Systems Architecture Patterns\"\n\nThis link text connects the documents by highlighting their shared focus on distributed systems design principles, spanning from batch processing architecture to consensus protocols."
+      }
+    ],
+    "How to authorize users in financial applications?.md": [],
+    "Universal API Testing Framework.md": [],
+    "Instahyire.md": [],
+    "URL shortener.excalidraw.md": [],
+    "System Design for URL Shortener.md": [],
+    "Notification Service Design Deep Dive.excalidraw.md": [],
+    "Notification Service.md": []
+  },
+  "backlinks": {
+    "Distributed Rate Limiting System Design.md": [
+      {
+        "source_document": "Distributed Consistency with Paxos Protocol.md",
+        "link_text": "\"Distributed Systems Architecture Fundamentals\"\n\nThis link text connects the documents well because:\n1. Both deal with core distributed systems concepts\n2. Both cover architectural patterns (Paxos and rate limiting)\n3. Both are fundamental building blocks for distributed system design",
+        "similarity_score": 0.5167710781097412
+      },
+      {
+        "source_document": "CAP Theorem.md",
+        "link_text": "\"Distributed Systems Architecture Fundamentals\"\n\nThis link text connects the two documents well since both discuss core architectural concepts in distributed systems - CAP theorem in the first and rate limiting in the second, making it a logical bridge between these related topics.",
+        "similarity_score": 0.5343571901321411
+      },
+      {
+        "source_document": "AWS Services Deep Dive.md",
+        "link_text": "\"Cloud Architecture Patterns\" - This link text connects the AWS services document with the rate limiting design doc, as both focus on architectural patterns for distributed cloud systems.",
+        "similarity_score": 0.5030036568641663
+      },
+      {
+        "source_document": "High-Scale Batch Payee Validation System.md",
+        "link_text": "\"Distributed Systems Performance Architecture\"\n\nThis link text connects the documents through their shared focus on distributed systems architecture and performance optimization, as evidenced by their common tags and technical focus on high-scale processing and system control mechanisms.",
+        "similarity_score": 0.5526193380355835
+      }
+    ],
+    "Database Indexing Overview.md": [],
+    "Types of DataBases.md": [
+      {
+        "source_document": "SQL vs No-SQL.md",
+        "link_text": "\"Database Types Comparison\"\n\nThis link text effectively connects the two documents as:\n1. The source discusses SQL vs NoSQL comparison\n2. The target provides a broader overview of database types\n3. Both documents focus on database architecture and classification",
+        "similarity_score": 0.53385990858078
+      }
+    ],
+    "SQL vs No-SQL.md": [
+      {
+        "source_document": "Types of DataBases.md",
+        "link_text": "\"Database Types Comparison\"\n\nThis link text effectively connects the source document about database types to the target document comparing SQL and NoSQL databases, capturing the core relationship between these related technical resources.",
+        "similarity_score": 0.53385990858078
+      },
+      {
+        "source_document": "Database Migration Strategies.md",
+        "link_text": "\"Database Architecture Comparison\"\n\nThis link text effectively connects the database migration strategies document with the SQL vs NoSQL comparison guide, focusing on their shared theme of database architecture while being concise and descriptive.",
+        "similarity_score": 0.519082248210907
+      },
+      {
+        "source_document": "System Design Interview Senior Software Engineer - Harsh Tiwari.md",
+        "link_text": "\"Database Systems Architecture\"\n\nThis link text connects the system design interview context from the first document with the database architecture focus of the second document, bridging their shared technical infrastructure theme.",
+        "similarity_score": 0.5028279423713684
+      }
+    ],
+    "Database Migration Strategies.md": [
+      {
+        "source_document": "SQL vs No-SQL.md",
+        "link_text": "\"Database Selection Strategy\"\n\nThis link text connects the documents naturally since the first covers SQL/NoSQL selection criteria while the second discusses database migration approaches - both relating to strategic database decisions.",
+        "similarity_score": 0.519082248210907
+      }
+    ],
+    "Basics of System Design.md": [],
+    "pormpts.md": [],
+    "overview.md": [],
+    "tags.md": [],
+    "Head-of-Line Blocking(The Evolution From HTTP-1.1 to HTTP-3).md": [],
+    "OSI Model.md": [],
+    "DNS & Internet Connectivity.md": [],
+    "Content Delivery Networks (CDN) and Network Routing.md": [],
+    "Caching Mechanisms in System Design.md": [],
+    "Consistency in Distributed Systems.md": [],
+    "Distributed Consistency with Paxos Protocol.md": [
+      {
+        "source_document": "Distributed Rate Limiting System Design.md",
+        "link_text": "\"Distributed Systems Architecture Fundamentals\"\n\nThis link text connects the documents by focusing on their shared core theme of fundamental distributed systems concepts, with both covering critical architectural components (rate limiting and consensus protocols) in distributed environments.",
+        "similarity_score": 0.5167710781097412
+      },
+      {
+        "source_document": "High-Scale Batch Payee Validation System.md",
+        "link_text": "\"Distributed Systems Architecture Patterns\"\n\nThis link text connects the documents by highlighting their shared focus on distributed systems design principles, spanning from batch processing architecture to consensus protocols.",
+        "similarity_score": 0.5051273107528687
+      }
+    ],
+    "Load Balancer.md": [],
+    "Too much Requests.md": [],
+    "Random Service or others.md": [],
+    "Senior Software Engineer Interview Preparation.md": [
+      {
+        "source_document": "System Design Interview Senior Software Engineer - Harsh Tiwari.md",
+        "link_text": "\"System Design Interview Guide\"\n\nThis link text concisely connects both documents as they focus on system design preparation for senior software engineering interviews.",
+        "similarity_score": 0.5678632855415344
+      }
+    ],
+    "CAP Theorem.md": [
+      {
+        "source_document": "Distributed Rate Limiting System Design.md",
+        "link_text": "\"Distributed Systems Design Principles\"\n\nThis link text effectively connects the two documents by highlighting their shared focus on fundamental distributed systems concepts, with the source covering rate limiting patterns and the target exploring CAP theorem principles.",
+        "similarity_score": 0.5343571901321411
+      }
+    ],
+    "Apache Kafka- Comprehensive Guide.md": [],
+    "Transaction Isolation Levels in Databases.md": [],
+    "Consistent Hashing.md": [],
+    "A Markdown based task tracker.md": [],
+    "Some new Ideas.md": [],
+    "UI Competition review.md": [],
+    "System Design Interview Senior Software Engineer - Harsh Tiwari.md": [
+      {
+        "source_document": "SQL vs No-SQL.md",
+        "link_text": "\"Database Selection Guide\" - This link text effectively connects the SQL/NoSQL database comparison document to the system design interview preparation content, as database selection is a crucial aspect of system design discussions.",
+        "similarity_score": 0.5028279423713684
+      },
+      {
+        "source_document": "Senior Software Engineer Interview Preparation.md",
+        "link_text": "\"System Design Interview Prep\"\n\nThis link text effectively connects the documents since both focus on system design in the context of senior software engineer interview preparation, while remaining concise and descriptive.",
+        "similarity_score": 0.5678632855415344
+      }
+    ],
+    "AWS Services Deep Dive.md": [
+      {
+        "source_document": "Distributed Rate Limiting System Design.md",
+        "link_text": "\"Distributed Cloud Scaling Systems\"\n\nThis link text connects the rate limiting concepts from the first document with the AWS architecture from the second, focusing on their shared themes of distributed systems and scalable architecture.",
+        "similarity_score": 0.5030036568641663
+      },
+      {
+        "source_document": "High-Scale Batch Payee Validation System.md",
+        "link_text": "\"Distributed Queue Processing Architectures\"\n\nThis link text connects the documents by highlighting their shared focus on distributed message processing systems, with both featuring queue-based architectures (Kafka/Redis in the first, SNS/SQS in the second) for handling high-scale operations.",
+        "similarity_score": 0.5128011703491211
+      }
+    ],
+    "Intelligent Task Processing System - Interview Analysis.md": [],
+    "High-Scale Batch Payee Validation System.md": [
+      {
+        "source_document": "Distributed Rate Limiting System Design.md",
+        "link_text": "\"Distributed System Performance Patterns\"\n\nThis link text connects the documents by highlighting their shared focus on distributed systems architecture and performance optimization, while being concise and descriptive.",
+        "similarity_score": 0.5526193380355835
+      },
+      {
+        "source_document": "Distributed Consistency with Paxos Protocol.md",
+        "link_text": "\"Distributed System Consensus Implementation\" - this link text connects the Paxos consensus protocol from the source document to the distributed architecture described in the target document, highlighting how theoretical consistency principles are applied in a practical system.",
+        "similarity_score": 0.5051273107528687
+      },
+      {
+        "source_document": "AWS Services Deep Dive.md",
+        "link_text": "\"Cloud Messaging Architectures\"\n\nThis link text connects the documents effectively because:\n1. Both documents focus on messaging-based architectures\n2. One covers AWS cloud services while the other describes a distributed system\n3. Both deal with message processing and queue-based workflows",
+        "similarity_score": 0.5128011703491211
+      }
+    ],
+    "How to authorize users in financial applications?.md": [],
+    "Universal API Testing Framework.md": [],
+    "Instahyire.md": [],
+    "URL shortener.excalidraw.md": [],
+    "System Design for URL Shortener.md": [],
+    "Notification Service Design Deep Dive.excalidraw.md": [],
+    "Notification Service.md": []
+  },
+  "document_tags": {
+    "Distributed Rate Limiting System Design.md": [
+      "algorithms",
+      "scaling",
+      "architecture",
+      "configuration",
+      "performance",
+      "concepts",
+      "tuning",
+      "system-design",
+      "internal-systems",
+      "distributed-systems",
+      "high-availability",
+      "rate-limiting",
+      "capacity",
+      "implementation",
+      "optimization"
+    ],
+    "Database Indexing Overview.md": [
+      "data-optimization",
+      "design",
+      "database-indexing",
+      "storage-architecture",
+      "structures",
+      "optimization"
+    ],
+    "Types of DataBases.md": [
+      "architecture",
+      "data-storage-systems",
+      "database-fundamentals",
+      "types",
+      "database-architecture",
+      "systems"
+    ],
+    "SQL vs No-SQL.md": [
+      "architecture",
+      "sql-databases",
+      "system-design",
+      "vs-nosql",
+      "nosql-databases",
+      "database-architecture",
+      "data-migration",
+      "comparison"
+    ],
+    "Database Migration Strategies.md": [
+      "sync",
+      "process",
+      "replication",
+      "engineering",
+      "cdc",
+      "structure",
+      "testing",
+      "migration",
+      "database-triggers",
+      "error-handling",
+      "quality-assurance",
+      "data-structure",
+      "assurance",
+      "rollover-plan",
+      "plan",
+      "overview",
+      "monitoring",
+      "phases",
+      "rollback",
+      "handling",
+      "alerting",
+      "quality",
+      "bestpractices",
+      "bruteforce",
+      "planning",
+      "triggers",
+      "database-views",
+      "devops",
+      "preparation",
+      "data-sync",
+      "views",
+      "technical",
+      "verification",
+      "validation",
+      "routing",
+      "compliance",
+      "abstraction",
+      "strategy",
+      "transition",
+      "proxy",
+      "setup",
+      "database",
+      "downtime",
+      "security",
+      "troubleshooting",
+      "implementation",
+      "realtime"
+    ],
+    "Basics of System Design.md": [
+      "architecture-principles",
+      "system-design",
+      "distributed-systems",
+      "software-engineering",
+      "distributed-computing",
+      "software-architecture"
+    ],
+    "pormpts.md": [
+      "writing-prompts",
+      "offensive-content",
+      "creative-writing",
+      "writing-style"
+    ],
+    "overview.md": [
+      "note-templates",
+      "note-structure",
+      "markdown",
+      "template",
+      "documentation",
+      "content-structure"
+    ],
+    "tags.md": [
+      "templates",
+      "metadata",
+      "tag-management",
+      "management"
+    ],
+    "Head-of-Line Blocking(The Evolution From HTTP-1.1 to HTTP-3).md": [
+      "web-protocols",
+      "performance-optimization",
+      "http-protocols",
+      "networking"
+    ],
+    "OSI Model.md": [
+      "network-protocols",
+      "networking",
+      "computer-networks",
+      "network-architecture",
+      "osi-model"
+    ],
+    "DNS & Internet Connectivity.md": [
+      "infrastructure",
+      "fundamentals",
+      "network-infrastructure",
+      "protocols",
+      "dns-architecture",
+      "internet-protocols"
+    ],
+    "Content Delivery Networks (CDN) and Network Routing.md": [
+      "content-delivery-networks",
+      "balancing",
+      "web-infrastructurethesetagsarerelevantbecausethey1directlyreferencethemaintopiccdns2coverthearchitecturalaspectsdiscussed3relatetothewebinfrastructurecontextofthedocument4arespecificenoughtobeusefulbutbroadenoughtobereusableacrossrelateddocuments",
+      "systems",
+      "network-architecture"
+    ],
+    "Caching Mechanisms in System Design.md": [
+      "architecture",
+      "design",
+      "strategies",
+      "storage",
+      "computing",
+      "optimization"
+    ],
+    "Consistency in Distributed Systems.md": [
+      "models",
+      "replication",
+      "architecture",
+      "distributed-systems",
+      "theorem",
+      "consistency",
+      "cap-theorem",
+      "systems"
+    ],
+    "Distributed Consistency with Paxos Protocol.md": [
+      "algorithms",
+      "distributed-systems",
+      "tolerance",
+      "consensus",
+      "fault-tolerance",
+      "systems"
+    ],
+    "Load Balancer.md": [
+      "architecture",
+      "networking",
+      "availability",
+      "balancing",
+      "load-balancing",
+      "systems",
+      "system-architecture"
+    ],
+    "Too much Requests.md": [
+      "request-handling",
+      "architecture",
+      "system-design",
+      "high-availability",
+      "load-balancing"
+    ],
+    "Random Service or others.md": [
+      "athena",
+      "spark",
+      "dataprocessingtoolskafka",
+      "data-processing",
+      "hadoop",
+      "aws-services",
+      "andinterviewpreparationresources",
+      "interview-preparationthesetagscapturethemainthemesofthedocumentwhichincludesawsserviceskinesis"
+    ],
+    "Senior Software Engineer Interview Preparation.md": [
+      "whilefollowingthespecifiedformattingrulesandremainingappropriatelyspecific",
+      "design",
+      "interview-preparationthesethreetagseffectivelycoverthemainthemesofthedocumentsystemdesignprinciples",
+      "generalsoftwareengineeringconcepts",
+      "engineering",
+      "anditspurposeasinterviewpreparationmaterial",
+      "system-design",
+      "preparation",
+      "software-engineering"
+    ],
+    "CAP Theorem.md": [
+      "models",
+      "architecture",
+      "design",
+      "theorem",
+      "systems"
+    ],
+    "Apache Kafka- Comprehensive Guide.md": [
+      "best-practices",
+      "producers",
+      "engineering",
+      "practices",
+      "fundamentals",
+      "systems"
+    ],
+    "Transaction Isolation Levels in Databases.md": [
+      "levels",
+      "isolation-levels",
+      "transaction-management",
+      "concurrency",
+      "theory",
+      "databases",
+      "transactions",
+      "management",
+      "database-theory"
+    ],
+    "Consistent Hashing.md": [
+      "algorithms",
+      "design",
+      "balancing",
+      "systems",
+      "structures"
+    ],
+    "A Markdown based task tracker.md": [
+      "project-planning",
+      "productivity",
+      "task-tracking",
+      "markdown",
+      "task-management",
+      "project-management"
+    ],
+    "Some new Ideas.md": [
+      "brainstorming",
+      "sincenocontentwasprovidedinthedocumentsomenewideasmd",
+      "icanonlysuggestgenerictagsbasedonthetitleideas",
+      "notes",
+      "ideas"
+    ],
+    "UI Competition review.md": [
+      "test-automation",
+      "ui-analysis",
+      "automation-testing",
+      "application-testing",
+      "web-analysis",
+      "ui-testing",
+      "testing-strategy"
+    ],
+    "System Design Interview Senior Software Engineer - Harsh Tiwari.md": [
+      "interview-prep",
+      "ai-testing",
+      "system-design",
+      "distributed-systems",
+      "software-engineering"
+    ],
+    "AWS Services Deep Dive.md": [
+      "aws",
+      "serverless",
+      "aws,",
+      "architecture,",
+      "cloud",
+      "workflow",
+      "compute",
+      "#messaging,",
+      "messaging",
+      "messaging,",
+      "#architecture,",
+      "workflow,",
+      "#aws,",
+      "#serverless,",
+      "#database,",
+      "cloud,",
+      "compute,",
+      "architecture",
+      "queue",
+      "queue,",
+      "database",
+      "serverless,",
+      "#cloud,"
+    ],
+    "Intelligent Task Processing System - Interview Analysis.md": [
+      "generation",
+      "architecture",
+      "pipelines",
+      "basedpipelines",
+      "systems"
+    ],
+    "High-Scale Batch Payee Validation System.md": [
+      "disaster-recovery",
+      "performance",
+      "messaging",
+      "cache",
+      "systems",
+      "processing",
+      "recovery",
+      "kafka",
+      "optimization",
+      "redis"
+    ],
+    "How to authorize users in financial applications?.md": [
+      "authorization",
+      "access-control",
+      "database-security",
+      "security-patterns",
+      "rbac-implementation",
+      "user-permissions",
+      "finance-auth"
+    ],
+    "Universal API Testing Framework.md": [
+      "test-automation",
+      "api-testing",
+      "testing-framework",
+      "dsl-design",
+      "dsl-framework"
+    ],
+    "Instahyire.md": [
+      "fullstack-development",
+      "system-scalability",
+      "fintech-development",
+      "api-architecture",
+      "system-scaling",
+      "backend-engineering",
+      "backend-development",
+      "fullstack-engineering",
+      "fintech"
+    ],
+    "URL shortener.excalidraw.md": [
+      "andaddedsystem-architecturetoreflectthearchitecturalnatureofthediagram",
+      "implementedasadistributedsystemivekepttheexistingurl-shorteneranddistributed-systemstagsastheyrehighlyrelevant",
+      "design",
+      "shortener",
+      "distributed-systemsthetagsiveselectedcoverthemainaspectsofthedocumentitsasystemarchitecturediagramspecificallyforaurlshortenerservice",
+      "url-shortener",
+      "diagram",
+      "systems",
+      "system-architecture"
+    ],
+    "System Design for URL Shortener.md": [
+      "distributed-systems",
+      "api-design",
+      "system-design",
+      "url-shortener"
+    ],
+    "Notification Service Design Deep Dive.excalidraw.md": [
+      "andaddedsystem-architecturetoreflectthearchitecturalnatureofthediagram",
+      "implementedasadistributedsystemivekepttheexistingurl-shorteneranddistributed-systemstagsastheyrehighlyrelevant",
+      "design",
+      "shortener",
+      "distributed-systemsthetagsiveselectedcoverthemainaspectsofthedocumentitsasystemarchitecturediagramspecificallyforaurlshortenerservice",
+      "url-shortener",
+      "diagram",
+      "systems",
+      "system-architecture"
+    ],
+    "Notification Service.md": [
+      "design",
+      "anditsasystemdesigndocument",
+      "service",
+      "system-designthesethreetagscoverthemainaspectsofthedocumentitsaboutanotificationsystemdesignwithinadistributedarchitecturecontext",
+      "distributed-architecture",
+      "notification-system",
+      "systems"
+    ]
+  }
+}

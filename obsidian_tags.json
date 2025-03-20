@@ -1,0 +1,385 @@
+{
+  "Distributed Rate Limiting System Design.md": [
+    "algorithms",
+    "scaling",
+    "architecture",
+    "configuration",
+    "performance",
+    "concepts",
+    "tuning",
+    "system-design",
+    "internal-systems",
+    "distributed-systems",
+    "high-availability",
+    "rate-limiting",
+    "capacity",
+    "implementation",
+    "optimization"
+  ],
+  "Database Indexing Overview.md": [
+    "data-optimization",
+    "design",
+    "database-indexing",
+    "storage-architecture",
+    "structures",
+    "optimization"
+  ],
+  "Types of DataBases.md": [
+    "architecture",
+    "data-storage-systems",
+    "database-fundamentals",
+    "types",
+    "database-architecture",
+    "systems"
+  ],
+  "SQL vs No-SQL.md": [
+    "architecture",
+    "sql-databases",
+    "system-design",
+    "vs-nosql",
+    "nosql-databases",
+    "database-architecture",
+    "data-migration",
+    "comparison"
+  ],
+  "Database Migration Strategies.md": [
+    "sync",
+    "process",
+    "replication",
+    "engineering",
+    "cdc",
+    "structure",
+    "testing",
+    "migration",
+    "database-triggers",
+    "error-handling",
+    "quality-assurance",
+    "data-structure",
+    "assurance",
+    "rollover-plan",
+    "plan",
+    "overview",
+    "monitoring",
+    "phases",
+    "rollback",
+    "handling",
+    "alerting",
+    "quality",
+    "bestpractices",
+    "bruteforce",
+    "planning",
+    "triggers",
+    "database-views",
+    "devops",
+    "preparation",
+    "data-sync",
+    "views",
+    "technical",
+    "verification",
+    "validation",
+    "routing",
+    "compliance",
+    "abstraction",
+    "strategy",
+    "transition",
+    "proxy",
+    "setup",
+    "database",
+    "downtime",
+    "security",
+    "troubleshooting",
+    "implementation",
+    "realtime"
+  ],
+  "Basics of System Design.md": [
+    "architecture-principles",
+    "system-design",
+    "distributed-systems",
+    "software-engineering",
+    "distributed-computing",
+    "software-architecture"
+  ],
+  "pormpts.md": [
+    "writing-prompts",
+    "offensive-content",
+    "creative-writing",
+    "writing-style"
+  ],
+  "overview.md": [
+    "note-templates",
+    "note-structure",
+    "markdown",
+    "template",
+    "documentation",
+    "content-structure"
+  ],
+  "tags.md": [
+    "templates",
+    "metadata",
+    "tag-management",
+    "management"
+  ],
+  "Head-of-Line Blocking(The Evolution From HTTP-1.1 to HTTP-3).md": [
+    "web-protocols",
+    "performance-optimization",
+    "http-protocols",
+    "networking"
+  ],
+  "OSI Model.md": [
+    "network-protocols",
+    "networking",
+    "computer-networks",
+    "network-architecture",
+    "osi-model"
+  ],
+  "DNS & Internet Connectivity.md": [
+    "infrastructure",
+    "fundamentals",
+    "network-infrastructure",
+    "protocols",
+    "dns-architecture",
+    "internet-protocols"
+  ],
+  "Content Delivery Networks (CDN) and Network Routing.md": [
+    "content-delivery-networks",
+    "balancing",
+    "web-infrastructurethesetagsarerelevantbecausethey1directlyreferencethemaintopiccdns2coverthearchitecturalaspectsdiscussed3relatetothewebinfrastructurecontextofthedocument4arespecificenoughtobeusefulbutbroadenoughtobereusableacrossrelateddocuments",
+    "systems",
+    "network-architecture"
+  ],
+  "Caching Mechanisms in System Design.md": [
+    "architecture",
+    "design",
+    "strategies",
+    "storage",
+    "computing",
+    "optimization"
+  ],
+  "Consistency in Distributed Systems.md": [
+    "models",
+    "replication",
+    "architecture",
+    "distributed-systems",
+    "theorem",
+    "consistency",
+    "cap-theorem",
+    "systems"
+  ],
+  "Distributed Consistency with Paxos Protocol.md": [
+    "algorithms",
+    "distributed-systems",
+    "tolerance",
+    "consensus",
+    "fault-tolerance",
+    "systems"
+  ],
+  "Load Balancer.md": [
+    "architecture",
+    "networking",
+    "availability",
+    "balancing",
+    "load-balancing",
+    "systems",
+    "system-architecture"
+  ],
+  "Too much Requests.md": [
+    "request-handling",
+    "architecture",
+    "system-design",
+    "high-availability",
+    "load-balancing"
+  ],
+  "Random Service or others.md": [
+    "athena",
+    "spark",
+    "dataprocessingtoolskafka",
+    "data-processing",
+    "hadoop",
+    "aws-services",
+    "andinterviewpreparationresources",
+    "interview-preparationthesetagscapturethemainthemesofthedocumentwhichincludesawsserviceskinesis"
+  ],
+  "Senior Software Engineer Interview Preparation.md": [
+    "whilefollowingthespecifiedformattingrulesandremainingappropriatelyspecific",
+    "design",
+    "interview-preparationthesethreetagseffectivelycoverthemainthemesofthedocumentsystemdesignprinciples",
+    "generalsoftwareengineeringconcepts",
+    "engineering",
+    "anditspurposeasinterviewpreparationmaterial",
+    "system-design",
+    "preparation",
+    "software-engineering"
+  ],
+  "CAP Theorem.md": [
+    "models",
+    "architecture",
+    "design",
+    "theorem",
+    "systems"
+  ],
+  "Apache Kafka- Comprehensive Guide.md": [
+    "best-practices",
+    "producers",
+    "engineering",
+    "practices",
+    "fundamentals",
+    "systems"
+  ],
+  "Transaction Isolation Levels in Databases.md": [
+    "levels",
+    "isolation-levels",
+    "transaction-management",
+    "concurrency",
+    "theory",
+    "databases",
+    "transactions",
+    "management",
+    "database-theory"
+  ],
+  "Consistent Hashing.md": [
+    "algorithms",
+    "design",
+    "balancing",
+    "systems",
+    "structures"
+  ],
+  "A Markdown based task tracker.md": [
+    "project-planning",
+    "productivity",
+    "task-tracking",
+    "markdown",
+    "task-management",
+    "project-management"
+  ],
+  "Some new Ideas.md": [
+    "brainstorming",
+    "sincenocontentwasprovidedinthedocumentsomenewideasmd",
+    "icanonlysuggestgenerictagsbasedonthetitleideas",
+    "notes",
+    "ideas"
+  ],
+  "UI Competition review.md": [
+    "test-automation",
+    "ui-analysis",
+    "automation-testing",
+    "application-testing",
+    "web-analysis",
+    "ui-testing",
+    "testing-strategy"
+  ],
+  "System Design Interview Senior Software Engineer - Harsh Tiwari.md": [
+    "interview-prep",
+    "ai-testing",
+    "system-design",
+    "distributed-systems",
+    "software-engineering"
+  ],
+  "AWS Services Deep Dive.md": [
+    "aws",
+    "serverless",
+    "aws,",
+    "architecture,",
+    "cloud",
+    "workflow",
+    "compute",
+    "#messaging,",
+    "messaging",
+    "messaging,",
+    "#architecture,",
+    "workflow,",
+    "#aws,",
+    "#serverless,",
+    "#database,",
+    "cloud,",
+    "compute,",
+    "architecture",
+    "queue",
+    "queue,",
+    "database",
+    "serverless,",
+    "#cloud,"
+  ],
+  "Intelligent Task Processing System - Interview Analysis.md": [
+    "generation",
+    "architecture",
+    "pipelines",
+    "basedpipelines",
+    "systems"
+  ],
+  "High-Scale Batch Payee Validation System.md": [
+    "disaster-recovery",
+    "performance",
+    "messaging",
+    "cache",
+    "systems",
+    "processing",
+    "recovery",
+    "kafka",
+    "optimization",
+    "redis"
+  ],
+  "How to authorize users in financial applications?.md": [
+    "authorization",
+    "access-control",
+    "database-security",
+    "security-patterns",
+    "rbac-implementation",
+    "user-permissions",
+    "finance-auth"
+  ],
+  "Universal API Testing Framework.md": [
+    "test-automation",
+    "api-testing",
+    "testing-framework",
+    "dsl-design",
+    "dsl-framework"
+  ],
+  "Instahyire.md": [
+    "fullstack-development",
+    "system-scalability",
+    "fintech-development",
+    "api-architecture",
+    "system-scaling",
+    "backend-engineering",
+    "backend-development",
+    "fullstack-engineering",
+    "fintech"
+  ],
+  "URL shortener.excalidraw.md": [
+    "andaddedsystem-architecturetoreflectthearchitecturalnatureofthediagram",
+    "implementedasadistributedsystemivekepttheexistingurl-shorteneranddistributed-systemstagsastheyrehighlyrelevant",
+    "design",
+    "shortener",
+    "distributed-systemsthetagsiveselectedcoverthemainaspectsofthedocumentitsasystemarchitecturediagramspecificallyforaurlshortenerservice",
+    "url-shortener",
+    "diagram",
+    "systems",
+    "system-architecture"
+  ],
+  "System Design for URL Shortener.md": [
+    "distributed-systems",
+    "api-design",
+    "system-design",
+    "url-shortener"
+  ],
+  "Notification Service Design Deep Dive.excalidraw.md": [
+    "andaddedsystem-architecturetoreflectthearchitecturalnatureofthediagram",
+    "implementedasadistributedsystemivekepttheexistingurl-shorteneranddistributed-systemstagsastheyrehighlyrelevant",
+    "design",
+    "shortener",
+    "distributed-systemsthetagsiveselectedcoverthemainaspectsofthedocumentitsasystemarchitecturediagramspecificallyforaurlshortenerservice",
+    "url-shortener",
+    "diagram",
+    "systems",
+    "system-architecture"
+  ],
+  "Notification Service.md": [
+    "design",
+    "anditsasystemdesigndocument",
+    "service",
+    "system-designthesethreetagscoverthemainaspectsofthedocumentitsaboutanotificationsystemdesignwithinadistributedarchitecturecontext",
+    "distributed-architecture",
+    "notification-system",
+    "systems"
+  ]
+}
