@@ -276,7 +276,7 @@ This link text effectively connects the two documents by highlighting how load b
 [[Too much Requests.md]]\|"Request Load Management"
 
 This link text effectively connects the load balancing concepts from the source document with the high request volume handling strategies in the target document, capturing their shared focus on managing and distributing traffic load.]]
-[[Senior Software Engineer Interview Preparation.md]]\|"Load Balancing System Design"
+[[system-design/Concepts/Senior Software Engineer Interview Preparation]]\|"Load Balancing System Design"
 
 This link text effectively connects the two documents by referencing load balancing in the context of system design, which is a key topic in both the source document about load balancing concepts and the target document's interview preparation section.]]
 
@@ -290,7 +290,7 @@ This link text captures the key relationship between CDNs and load balancers, hi
 - [[Too much Requests.md]]\|"Request Distribution Strategies"
 
 This link text effectively connects the source document about handling high request volumes with the target document about load balancing, capturing their shared focus on managing and distributing incoming traffic loads.]]
-- [[Senior Software Engineer Interview Preparation.md]]\|"Load Balancer Implementation Details"
+- [[system-design/Concepts/Senior Software Engineer Interview Preparation]]\|"Load Balancer Implementation Details"
 
 This link text effectively connects the high-level mention of load balancing in the interview prep document to the detailed technical document about load balancing concepts and implementation.]]
 - [[Consistent Hashing.md]]\|"Load Distribution Strategy"

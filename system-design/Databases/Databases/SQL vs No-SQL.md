@@ -202,7 +202,7 @@ flowchart TD
 
 
 ## Suggested Related Documents
-[[Senior Software Engineer Interview Preparation.md]]]|"Database Design Fundamentals"
+[[Senior Software Engineer Interview Preparation]]]|"Database Design Fundamentals"
 
 This link text effectively connects the SQL/NoSQL database concepts from the source document to the system design section of the interview preparation guide, highlighting the fundamental nature of database selection in system architecture.]]
 

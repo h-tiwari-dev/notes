@@ -60,7 +60,7 @@ sequenceDiagram
     Note over DB: Returns 4 rows (Phantom)
 ```
 
-## Isolation Levels in Detail
+## Isolation Levels in Detail #isolation-levels 
 
 ### Read Uncommitted
 - Lowest isolation level

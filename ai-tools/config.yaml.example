@@ -1,0 +1,6 @@
+anthropic_api_key: ""
+model: "claude-3-5-sonnet-20241022"
+embedding_model: "all-MiniLM-L6-v2"
+similarity_threshold: 0.5
+cache_dir: ".obsidian_cache"  # Directory to store cache files
+use_cache: true  # Whether to use caching

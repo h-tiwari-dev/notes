@@ -223,7 +223,7 @@ graph LR
 ```
 
 
-## Transaction Isolation Levels
+## Transaction Isolation Levels #isolation-levels 
 
 ### Efficiency vs Isolation Trade-off
 ```mermaid
@@ -236,19 +236,19 @@ graph LR
     style A fill:#f96,stroke:#333
 ```
 
-1. Read Uncommitted
+1. [[Transaction Isolation Levels in Databases#Read Uncommitted]] *Read Uncommitted*
    - Overwritten on update operations
    - Lowest isolation, highest efficiency
 
-2. Read Committed
+1. [[Transaction Isolation Levels in Databases#Read Committed]]*Read Committed*
    - Local copy of changed values
    - Old value in DB, new in local copy until commit
 
-3. Repeatable Read
+1. [[Transaction Isolation Levels in Databases#Repeatable Read]] *Repeatable Read*
    - Versioning of unchanged values
    - Stores all historical values for keys
 
-4. Serializable
+1. [[Transaction Isolation Levels in Databases#Serializable]] *Serializable*
    - Uses queued locks
    - Causal ordering
    - Highest isolation, lowest efficiency

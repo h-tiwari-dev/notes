@@ -2,5 +2,6 @@
   "tabSize": 4,
   "vimMode": true,
   "attachmentFolderPath": "system-design/assets",
-  "readableLineLength": false
+  "readableLineLength": false,
+  "alwaysUpdateLinks": true
 }

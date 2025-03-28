@@ -1,7 +1,7 @@
 import os
 import json
 import re
-from typing import List, Dict, Any, Set
+from typing import List, Dict, Any, Set, Optional
 import requests
 import numpy as np
 from sentence_transformers import SentenceTransformer
@@ -11,25 +11,58 @@ from collections import defaultdict
 
 
 class AdvancedObsidianProcessor:
-    def __init__(self, config_path: str):
+    def __init__(
+        self,
+        vault_path: str,
+        config_path: Optional[str] = None,
+        api_key: Optional[str] = None,
+        model: Optional[str] = None,
+        embedding_model: Optional[str] = None,
+        similarity_threshold: float = 0.5,
+        verbose: bool = False,
+    ):
         """
         Advanced Obsidian Document Processor with backlinks, tags, and advanced analysis
 
-        :param config_path: Path to configuration YAML file
+        :param vault_path: Path to Obsidian vault
+        :param config_path: Optional path to configuration YAML file
+        :param api_key: Optional Anthropic API key
+        :param model: Optional Anthropic model name
+        :param embedding_model: Optional embedding model name
+        :param similarity_threshold: Threshold for document similarity (0.0-1.0)
+        :param verbose: Enable verbose logging
         """
-        # Load configuration
-        # with open(config_path, "r") as config_file:
-        #     self.config = yaml.safe_load(config_file)
+        # Configure logging
+        log_level = logging.DEBUG if verbose else logging.INFO
+        logging.basicConfig(
+            level=log_level,
+            format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+            handlers=[logging.StreamHandler()],
+        )
+        self.logger = logging.getLogger("ObsidianTagger")
 
-        vault_path = "./system-design/"
-        anthropic_api_key = ""
+        # Load configuration from file if provided
+        config = {}
+        if config_path:
+            try:
+                with open(config_path, "r") as config_file:
+                    config = yaml.safe_load(config_file)
+                self.logger.info(f"Loaded configuration from {config_path}")
+            except Exception as e:
+                self.logger.warning(f"Failed to load config file: {e}")
+
+        # Set parameters with priority: direct args > config file > defaults
         self.vault_path = vault_path
-        self.api_key = anthropic_api_key
-        self.model = "claude-3-5-sonnet-20241022"
+        self.api_key = api_key or config.get("anthropic_api_key", "")
+        self.model = model or config.get("model", "claude-3-5-sonnet-20241022")
+        self.similarity_threshold = similarity_threshold
 
         # Initialize embedding model for semantic analysis
-        print("Loading sentence embedding model...")
-        self.embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
+        embedding_model_name = embedding_model or config.get(
+            "embedding_model", "all-MiniLM-L6-v2"
+        )
+        self.logger.info(f"Loading sentence embedding model: {embedding_model_name}")
+        self.embedding_model = SentenceTransformer(embedding_model_name)
 
         # Ensure vault path exists
         if not os.path.exists(self.vault_path):
@@ -51,18 +84,33 @@ class AdvancedObsidianProcessor:
         :return: List of dictionaries with file info
         """
         markdown_files = []
-        for root, _, files in tqdm(
-            os.walk(self.vault_path), desc="Discovering Markdown Files"
-        ):
-            for file in files:
-                if file.endswith(".md"):
-                    full_path = os.path.join(root, file)
-                    with open(full_path, "r", encoding="utf-8") as f:
-                        content = f.read()
-                        markdown_files.append(
-                            {"filename": file, "path": full_path, "content": content}
-                        )
-        return markdown_files
+        self.logger.info(f"Scanning for markdown files in {self.vault_path}")
+
+        try:
+            for root, _, files in tqdm(
+                os.walk(self.vault_path), desc="Discovering Markdown Files"
+            ):
+                for file in files:
+                    if file.endswith(".md"):
+                        full_path = os.path.join(root, file)
+                        try:
+                            with open(full_path, "r", encoding="utf-8") as f:
+                                content = f.read()
+                                markdown_files.append(
+                                    {
+                                        "filename": file,
+                                        "path": full_path,
+                                        "content": content,
+                                    }
+                                )
+                        except Exception as e:
+                            self.logger.warning(f"Failed to read {full_path}: {e}")
+
+            self.logger.info(f"Found {len(markdown_files)} markdown files")
+            return markdown_files
+        except Exception as e:
+            self.logger.error(f"Error scanning vault: {e}")
+            return []
 
     def extract_existing_links(self, content: str) -> List[str]:
         """
@@ -160,7 +208,7 @@ class AdvancedObsidianProcessor:
         :param documents: List of documents
         :return: Dictionary of document similarities with link metadata
         """
-        print("Generating document embeddings...")
+        self.logger.info("Generating document embeddings...")
         # Generate embeddings for all documents
         embeddings = {}
         for doc in tqdm(documents, desc="Computing Embeddings"):
@@ -170,10 +218,9 @@ class AdvancedObsidianProcessor:
 
         # Compute pairwise similarities with detailed link information
         document_similarities = {}
-        print("Computing document similarities...")
-
-        # Lower the similarity threshold for more matches
-        similarity_threshold = 0.5  # Changed from 0.7 to 0.5
+        self.logger.info(
+            f"Computing document similarities (threshold: {self.similarity_threshold})..."
+        )
 
         total_similarities_found = 0
 
@@ -201,18 +248,18 @@ class AdvancedObsidianProcessor:
                     doc2_basename = os.path.basename(doc2["filename"])
 
                     # Debug information
-                    if sim_score > similarity_threshold:
-                        print(
+                    if sim_score > self.similarity_threshold:
+                        self.logger.debug(
                             f"High similarity ({sim_score:.2f}) between: {doc1_basename} and {doc2_basename}"
                         )
                         if doc2_basename in normalized_existing_links:
-                            print(
+                            self.logger.debug(
                                 f"  - Skipping: {doc2_basename} already linked in {doc1_basename}"
                             )
 
                     # Add similar documents as potential links with improved filename comparison
                     if (
-                        sim_score > similarity_threshold
+                        sim_score > self.similarity_threshold
                         and doc2_basename not in normalized_existing_links
                     ):
                         total_similarities_found += 1
@@ -232,9 +279,11 @@ class AdvancedObsidianProcessor:
             )
 
             # Debug output for each document
-            print(f"Found {len(similarities)} similar documents for {doc1_basename}")
+            self.logger.debug(
+                f"Found {len(similarities)} similar documents for {doc1_basename}"
+            )
 
-        print(
+        self.logger.info(
             f"Total similarities found across all documents: {total_similarities_found}"
         )
         return document_similarities
@@ -463,28 +512,45 @@ class AdvancedObsidianProcessor:
             # Return some generic tags as fallback
             return ["document", "note"]
 
-    def process_vault(self):
+    def process_vault(self, dry_run=False, tags_only=False, links_only=False):
         """
         Comprehensive vault processing workflow
+
+        :param dry_run: If True, analyze but don't modify files
+        :param tags_only: If True, only generate tags
+        :param links_only: If True, only generate links
+        :return: Dictionary with analysis results
         """
         # 1. Initial document processing
-        print("Starting Obsidian Vault Processing...")
+        self.logger.info(f"Starting Obsidian Vault Processing for {self.vault_path}...")
         markdown_files = self.read_markdown_files()
 
-        # 2. Semantic Similarity Analysis
-        document_similarities = self.semantic_similarity_tagging(markdown_files)
+        if not markdown_files:
+            self.logger.error("No markdown files found. Aborting.")
+            return {}
 
-        # 3. Generate Backlinks
-        self.generate_backlinks(document_similarities, markdown_files)
+        # 2. Semantic Similarity Analysis (skip if tags_only)
+        document_similarities = {}
+        if not tags_only:
+            document_similarities = self.semantic_similarity_tagging(markdown_files)
 
-        # 4. Generate Tags
-        document_tags = self.generate_tags(markdown_files)
+        # 3. Generate Backlinks (skip if tags_only)
+        if not tags_only:
+            self.generate_backlinks(document_similarities, markdown_files)
+
+        # 4. Generate Tags (skip if links_only)
+        document_tags = {}
+        if not links_only:
+            document_tags = self.generate_tags(markdown_files)
 
         # 5. Update documents with generated links, backlinks, and tags
-        print("Updating Documents...")
-        self._update_documents(markdown_files, document_similarities)
+        if not dry_run:
+            self.logger.info("Updating Documents...")
+            self._update_documents(markdown_files, document_similarities)
+        else:
+            self.logger.info("Dry run mode - skipping document updates")
 
-        print("Vault Processing Complete!")
+        self.logger.info("Vault Processing Complete!")
         return {
             "document_similarities": document_similarities,
             "backlinks": self.backlinks,
@@ -607,48 +673,154 @@ class AdvancedObsidianProcessor:
         :param prompt: Prompt to send to Claude
         :return: API response
         """
-        headers = {
-            "Content-Type": "application/json",
-            "X-API-Key": self.api_key,
-            "Anthropic-Version": "2023-06-01",
-        }
+        if not self.api_key:
+            self.logger.warning("No API key provided, using placeholder text")
+            return f"Related content for {prompt[:20]}..."
 
-        payload = {
-            "model": self.model,
-            "max_tokens": 1000,
-            "messages": [{"role": "user", "content": prompt}],
-        }
+        try:
+            headers = {
+                "Content-Type": "application/json",
+                "X-API-Key": self.api_key,
+                "Anthropic-Version": "2023-06-01",
+            }
 
-        response = requests.post(
-            "https://api.anthropic.com/v1/messages",
-            headers=headers,
-            data=json.dumps(payload),
-        )
+            payload = {
+                "model": self.model,
+                "max_tokens": 1000,
+                "messages": [{"role": "user", "content": prompt}],
+            }
 
-        if response.status_code != 200:
-            raise Exception(f"API call failed: {response.text}")
+            self.logger.debug(f"Calling Claude API with model: {self.model}")
+            response = requests.post(
+                "https://api.anthropic.com/v1/messages",
+                headers=headers,
+                data=json.dumps(payload),
+                timeout=30,  # Add timeout to prevent hanging
+            )
 
-        return response.json()["content"][0]["text"]
+            if response.status_code != 200:
+                self.logger.error(
+                    f"API call failed: {response.status_code} - {response.text}"
+                )
+                return f"Related content (API error)"
+
+            return response.json()["content"][0]["text"]
+
+        except Exception as e:
+            self.logger.error(f"Error calling Claude API: {e}")
+            return f"Related content (error: {str(e)[:50]})"
+
+
+def setup_argparse():
+    """Set up command line argument parsing"""
+    parser = argparse.ArgumentParser(
+        description="Advanced Obsidian Vault Processor with AI tagging and linking",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    )
+
+    parser.add_argument("vault_path", help="Path to Obsidian vault directory")
+
+    parser.add_argument("-c", "--config", help="Path to YAML configuration file")
+
+    parser.add_argument(
+        "-o",
+        "--output",
+        default="./obsidian_analysis",
+        help="Output directory for analysis results",
+    )
+
+    parser.add_argument(
+        "-k", "--api-key", help="Anthropic API key (overrides config file)"
+    )
+
+    parser.add_argument(
+        "-m", "--model", help="Anthropic model name (overrides config file)"
+    )
+
+    parser.add_argument(
+        "-e", "--embedding-model", help="Sentence transformer model for embeddings"
+    )
+
+    parser.add_argument(
+        "-t",
+        "--threshold",
+        type=float,
+        default=0.5,
+        help="Similarity threshold (0.0-1.0)",
+    )
+
+    parser.add_argument(
+        "--dry-run", action="store_true", help="Analyze without modifying files"
+    )
+
+    parser.add_argument(
+        "--tags-only",
+        action="store_true",
+        help="Only generate tags, skip links and backlinks",
+    )
+
+    parser.add_argument(
+        "--links-only", action="store_true", help="Only generate links, skip tags"
+    )
+
+    parser.add_argument(
+        "-v", "--verbose", action="store_true", help="Enable verbose logging"
+    )
+
+    return parser
 
 
 def main():
-    # Use config path
-    processor = AdvancedObsidianProcessor("config.yaml")
+    """Main entry point for the CLI application"""
+    parser = setup_argparse()
+    args = parser.parse_args()
 
-    # Process entire vault
-    results = processor.process_vault()
+    # Create output directory if it doesn't exist
+    output_dir = Path(args.output)
+    output_dir.mkdir(parents=True, exist_ok=True)
 
-    # Save results to JSON
-    print("Saving analysis results...")
-    with open("obsidian_advanced_analysis.json", "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=2, ensure_ascii=False)
+    try:
+        # Initialize processor
+        processor = AdvancedObsidianProcessor(
+            vault_path=args.vault_path,
+            config_path=args.config,
+            api_key=args.api_key,
+            model=args.model,
+            embedding_model=args.embedding_model,
+            similarity_threshold=args.threshold,
+            verbose=args.verbose,
+        )
 
-    # Save tags specifically for reference
-    print("Saving tag analysis...")
-    with open("obsidian_tags.json", "w", encoding="utf-8") as f:
-        json.dump(results["document_tags"], f, indent=2, ensure_ascii=False)
+        # Process vault with appropriate options
+        results = processor.process_vault(
+            dry_run=args.dry_run, tags_only=args.tags_only, links_only=args.links_only
+        )
 
-    print("Processing complete!")
+        if not results:
+            print("No results generated. Check logs for errors.")
+            sys.exit(1)
+
+        # Save results to JSON
+        print(f"Saving analysis results to {output_dir}...")
+        with open(
+            output_dir / "obsidian_advanced_analysis.json", "w", encoding="utf-8"
+        ) as f:
+            json.dump(results, f, indent=2, ensure_ascii=False)
+
+        # Save tags specifically for reference
+        print("Saving tag analysis...")
+        with open(output_dir / "obsidian_tags.json", "w", encoding="utf-8") as f:
+            json.dump(results["document_tags"], f, indent=2, ensure_ascii=False)
+
+        print("Processing complete!")
+
+    except Exception as e:
+        print(f"Error: {e}")
+        if args.verbose:
+            import traceback
+
+            traceback.print_exc()
+        sys.exit(1)
 
 
 if __name__ == "__main__":

@@ -388,12 +388,12 @@ Effective caching strategies are crucial for building high-performance, scalable
 [[Consistent Hashing.md]]\|"Distributed Cache Implementation Strategy"
 
 This link text effectively connects the two documents by bridging caching mechanisms with consistent hashing, which is a key strategy for implementing distributed caching systems.]]
-[[Senior Software Engineer Interview Preparation.md]]\|"System Design Performance Concepts"
+[[Senior Software Engineer Interview Preparation]]\|"System Design Performance Concepts"
 
 This link text effectively connects the caching mechanisms document to the interview preparation guide through their shared focus on system design and performance optimization topics.]]
 
 ## Backlinks
-- [[Senior Software Engineer Interview Preparation.md]]\|"System Design Caching Strategies"
+- [[Senior Software Engineer Interview Preparation]]\|"System Design Caching Strategies"
 
 This link text effectively connects the two documents by:
 1. Referencing "System Design" which appears in both documents

@@ -1,16 +1,38 @@
 ---
 title: "Content Delivery Networks (CDNs): Architecture and Networking Concepts"
-tags: balancing, systems, content-delivery-networks, web-infrastructurethesetagsarerelevantbecausethey1directlyreferencethemaintopiccdns2coverthearchitecturalaspectsdiscussed3relatetothewebinfrastructurecontextofthedocument4arespecificenoughtobeusefulbutbroadenoughtobereusableacrossrelateddocuments, network-architecture
+tags:
+  - balancing
+  - systems
+  - content-delivery-networks
+  - network-architecture
 date: 2023-05-15
-author: "Your Name"
-aliases: [CDN, content-delivery-network]
-related: [DNS, BGP, caching, load-balancing, DDoS-protection, web-performance]
+author: Your Name
+aliases:
+  - CDN
+  - content-delivery-network
+related:
+  - DNS
+  - BGP
+  - caching
+  - load-balancing
+  - DDoS-protection
+  - web-performance
 status: complete
 last_modified: 2023-05-15
 complexity: advanced
-use_cases: [web-acceleration, content-distribution, video-streaming, software-distribution]
-key_concepts: [edge-servers, caching, anycast, DNS-based-load-balancing, BGP-routing]
-diagrams: [mermaid]
+use_cases:
+  - web-acceleration
+  - content-distribution
+  - video-streaming
+  - software-distribution
+key_concepts:
+  - edge-servers
+  - caching
+  - anycast
+  - DNS-based-load-balancing
+  - BGP-routing
+diagrams:
+  - mermaid
 ---
 
 ## Introduction

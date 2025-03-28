@@ -443,7 +443,7 @@ This link text effectively connects the candidate's specific experience details 
 
 
 ## Suggested Related Documents
-[[Senior Software Engineer Interview Preparation.md]]]|"System Design Interview Guide"
+[[Senior Software Engineer Interview Preparation]]]|"System Design Interview Guide"
 
 This link text concisely connects both documents as they focus on system design preparation for senior software engineering interviews.]]
 [[SQL vs No-SQL.md]]]|"Database Systems Architecture"
@@ -452,6 +452,6 @@ This link text connects the system design interview context from the first docum
 
 ## Backlinks
 - [[SQL vs No-SQL.md]]]|"Database Selection Guide" - This link text effectively connects the SQL/NoSQL database comparison document to the system design interview preparation content, as database selection is a crucial aspect of system design discussions.]]
-- [[Senior Software Engineer Interview Preparation.md]]]|"System Design Interview Prep"
+- [[Senior Software Engineer Interview Preparation]]]|"System Design Interview Prep"
 
 This link text effectively connects the documents since both focus on system design in the context of senior software engineer interview preparation, while remaining concise and descriptive.]]

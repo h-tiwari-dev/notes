@@ -151,6 +151,6 @@ This link text effectively connects the two documents by:
 2. Referencing the hashing focus of the target document
 3. Keeping it general enough to bridge consistency and hashing concepts]]
 - [[Load Balancer.md]]\|"Load balancing implementation technique" - this link text effectively connects the two documents by showing that consistent hashing is a specific technical method used within load balancing systems, while being concise and descriptive.]]
-- [[Senior Software Engineer Interview Preparation.md]]\|"Consistent Hashing Load Balancing"
+- [[system-design/Concepts/Senior Software Engineer Interview Preparation]]\|"Consistent Hashing Load Balancing"
 
 This link text effectively connects the load balancing discussion in the source document with the detailed explanation of consistent hashing in the target document, highlighting their related technical concepts in distributed systems.]]
